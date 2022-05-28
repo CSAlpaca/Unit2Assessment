@@ -16,7 +16,6 @@ async function create(req, res, next) {
   // console.log("exited show");
   // console.log(foundTodos);
 
-  res.redirect("/");
   res.render("index.ejs", { title: "Unit 2 Assessment", foundTodos });
 }
 

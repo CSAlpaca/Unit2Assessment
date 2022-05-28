@@ -5,6 +5,6 @@ const todoCtrl = require("../controller/todos.js");
 /* GET home page. */
 router.get("/", todoCtrl.index);
 
-router.post("/create", todoCtrl.create);
+router.post("/", todoCtrl.create);
 
 module.exports = router;
