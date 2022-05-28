@@ -13,22 +13,18 @@
     <ul>
       <% for(let i = 0; i < foundTodos.length; i++) { %>
       <li>
-        <%= foundTodos[i].todo %> <span></span> <%= foundTodos[i].done %> <% }
-        %>
+        <%= foundTodos[i].todo %> <span></span> <%= foundTodos.done? 'Done' :
+        'Not Done' %> <% } %>
+
+        <span></span>
       </li>
     </ul>
 
     <form action="/" method="POST">
-      <input type="text" name="todo" required />
-      <button onclick="removeH3()">ADD TO DO</button>
+      <input type="text" name="todo" name="done" required />
+      <button>ADD TO DO</button>
 
       <br />
     </form>
-    <script>
-      function removeH3() {
-        console.log("removeH3");
-        document.getElementById("NoTodos").innerHTML = "";
-      }
-    </script>
   </body>
 </html>
